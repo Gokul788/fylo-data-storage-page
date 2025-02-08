@@ -1,0 +1,198 @@
+/* Improt Fonts from Google Fonts */
+
+/* - Family: [Raleway] */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Variables */
+
+:root{
+    --font-family:"Raleway", serif;
+    --body-background-color: hsl(229, 57%, 11%);
+    --container-background-color: hsl(228, 56%, 26%);
+   
+}
+
+/* Gerneral Stles */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--body-background-color);
+    background-image: url(./assets/images/bg-mobile.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-family);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 330px;
+}
+
+.header{
+    background-color: var(--container-background-color);
+    padding: 3rem 3rem;
+    border-radius: 15px;
+    border-top-right-radius: 40%;
+    
+}
+.header > img{
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.actions-list{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.actions-list > li {
+    list-style-type: none;
+}
+.action-item{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--body-background-color);
+}
+
+.storage-status{
+    background-color: var(--container-background-color);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.storage-usage{
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+.progress-bar{
+    margin-top: 1.3rem;
+}
+.progress-track{
+    
+    background-color: rgba(0, 0, 0, 0.336);
+    padding: 3px 3px 3px 3px;
+    border-radius: 20px;
+    width: 100%;
+    outline: none;
+}
+
+.progress-indicator{
+    background: rgb(255,163,153);
+background: linear-gradient(90deg, rgba(255,163,153,1) 17%, rgba(255,77,151,1) 83%);
+    width: 80%;
+    padding: 3px 3px 3px 3px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.progress-dot{
+    background-color: white;
+    padding:  7px;
+    border-radius: 50%;
+}
+
+.progress-labels{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.616);
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.storage-remaining{
+    background-color: white;
+    max-width: 150px;
+    padding:  1.2rem .79rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 20px;
+    position: absolute;
+    left: 90px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.remaining-number{
+    font-size: 2.2rem;
+}
+.remaining-text{
+    color: rgba(0, 0, 0, 0.527);
+    font-weight: 700;
+}
+
+/* Media Quary */ 
+
+@media (min-width:768px) {
+
+    body{
+        background-image: url(./assets/images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+    }
+    .container{
+        flex-direction: row;
+        max-width: 900px;
+        align-items: baseline;
+        position: relative;
+    }
+    .header{
+        height: 250px;
+        
+    }
+    .storage-status{
+       width: 500px;
+       height: 200px; 
+
+    }
+    .storage-remaining{
+        top: -95px;
+        left: 290px;
+        max-width: 200px;
+        z-index: 1;
+    }
+    .storage-remaining::after {
+        content: '';
+        position: absolute;
+        /* Position it at the bottom right; adjust these values as needed */
+        bottom: -20px; /* Increased to accommodate larger triangle height */
+        right: 0px;
+        width: 60px;  /* Increased width for a larger triangle */
+        height: 60px; /* Increased height for a larger triangle */
+        background-color:white;
+        z-index: -2;
+        /* Creates a triangle with a diagonal hypotenuse */
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        filter: drop-shadow(-4px 4px 2px rgba(0,0,0,0.1));
+      }
+
+      .createdby{
+        color: rgba(255, 255, 255, 0.699);
+        margin-top: 1rem;
+        text-align: center;
+      }
+  
+}

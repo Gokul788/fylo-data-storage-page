@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fylo Cloud Storage Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <img class="logo" src="./assets/images/logo.svg" alt="Fylo logo">
+            
+            <nav class="actions" aria-label="File actions">
+                <ul class="actions-list">
+                    <li>
+                        <button class="action-item" aria-label="Manage documents">
+                            <img src="./assets/images/icon-document.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="action-item" aria-label="Manage folders">
+                            <img src="./assets/images/icon-folder.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="action-item" aria-label="Upload files">
+                            <img src="./assets/images/icon-upload.svg" alt="">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="storage-status" aria-labelledby="storage-heading">
+        
+            
+            <p class="storage-usage">
+                You've used <strong>815 GB</strong> of your storage
+            </p>
+
+            <div class="progress-bar">
+                <div class="progress-track">
+                    <div class="progress-indicator" >
+                        
+                        <span class="progress-dot" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="progress-labels">
+                    <span>0 GB</span>
+                    <span>1000 GB</span>
+                </div>
+            </div>
+             <p class="createdby">Created By : &copyGokul</p>
+            <div class="storage-remaining">
+                <strong class="remaining-number">185</strong>
+                <span class="remaining-text">GB LEFT</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
