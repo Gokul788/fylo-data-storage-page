@@ -124,14 +124,15 @@ background: linear-gradient(90deg, rgba(255,163,153,1) 17%, rgba(255,77,151,1) 8
 
 .storage-remaining{
     background-color: white;
-    max-width: 150px;
+    max-width: 180px;
     padding:  1.2rem .79rem;
     display: flex;
     align-items: center;
     gap: 15px;
     border-radius: 20px;
     position: absolute;
-    left: 90px;
+    left: 75px;
+  
     margin-top: 10px;
     justify-content: center;
 }
@@ -141,6 +142,9 @@ background: linear-gradient(90deg, rgba(255,163,153,1) 17%, rgba(255,77,151,1) 8
 .remaining-text{
     color: rgba(0, 0, 0, 0.527);
     font-weight: 700;
+}
+.createdby{
+    display: none;
 }
 
 /* Media Quary */ 
