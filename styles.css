@@ -194,6 +194,7 @@ background: linear-gradient(90deg, rgba(255,163,153,1) 17%, rgba(255,77,151,1) 8
       }
 
       .createdby{
+        display: block;
         color: rgba(255, 255, 255, 0.699);
         margin-top: 1rem;
         text-align: center;
